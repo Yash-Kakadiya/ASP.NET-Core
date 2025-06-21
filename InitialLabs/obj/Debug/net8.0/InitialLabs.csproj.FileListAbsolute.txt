@@ -1,0 +1,15 @@
+D:\01.DU Work\ASP.NET-Core\InitialLabs\bin\Debug\net8.0\InitialLabs.exe
+D:\01.DU Work\ASP.NET-Core\InitialLabs\bin\Debug\net8.0\InitialLabs.deps.json
+D:\01.DU Work\ASP.NET-Core\InitialLabs\bin\Debug\net8.0\InitialLabs.runtimeconfig.json
+D:\01.DU Work\ASP.NET-Core\InitialLabs\bin\Debug\net8.0\InitialLabs.dll
+D:\01.DU Work\ASP.NET-Core\InitialLabs\bin\Debug\net8.0\InitialLabs.pdb
+D:\01.DU Work\ASP.NET-Core\InitialLabs\obj\Debug\net8.0\InitialLabs.GeneratedMSBuildEditorConfig.editorconfig
+D:\01.DU Work\ASP.NET-Core\InitialLabs\obj\Debug\net8.0\InitialLabs.AssemblyInfoInputs.cache
+D:\01.DU Work\ASP.NET-Core\InitialLabs\obj\Debug\net8.0\InitialLabs.AssemblyInfo.cs
+D:\01.DU Work\ASP.NET-Core\InitialLabs\obj\Debug\net8.0\InitialLabs.csproj.CoreCompileInputs.cache
+D:\01.DU Work\ASP.NET-Core\InitialLabs\obj\Debug\net8.0\InitialLabs.sourcelink.json
+D:\01.DU Work\ASP.NET-Core\InitialLabs\obj\Debug\net8.0\InitialLabs.dll
+D:\01.DU Work\ASP.NET-Core\InitialLabs\obj\Debug\net8.0\refint\InitialLabs.dll
+D:\01.DU Work\ASP.NET-Core\InitialLabs\obj\Debug\net8.0\InitialLabs.pdb
+D:\01.DU Work\ASP.NET-Core\InitialLabs\obj\Debug\net8.0\InitialLabs.genruntimeconfig.cache
+D:\01.DU Work\ASP.NET-Core\InitialLabs\obj\Debug\net8.0\ref\InitialLabs.dll
