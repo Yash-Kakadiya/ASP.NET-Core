@@ -3,19 +3,14 @@
   "WorkspaceRootPath": "D:\\01.DU Work\\ASP.NET-Core\\InitialLabs\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AD3AE5EB-715E-4326-9B6D-3F1C0EE01CAE}|..\\Lab03\\Lab03.csproj|d:\\01.du work\\asp.net-core\\lab03\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CE6A9B14-9839-49DF-AB8F-566DA7D7E600}|..\\Lab05\\Lab05.csproj|d:\\01.du work\\asp.net-core\\lab05\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD3AE5EB-715E-4326-9B6D-3F1C0EE01CAE}|..\\Lab03\\Lab03.csproj|d:\\01.du work\\asp.net-core\\lab03\\classes\\calculate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9E0DBED5-08A9-4A6C-8592-E47BDF30A392}|InitialLabs.csproj|d:\\01.du work\\asp.net-core\\initiallabs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E0DBED5-08A9-4A6C-8592-E47BDF30A392}|InitialLabs.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD3AE5EB-715E-4326-9B6D-3F1C0EE01CAE}|..\\Lab03\\Lab03.csproj|d:\\01.du work\\asp.net-core\\lab03\\classes\\calculateinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD3AE5EB-715E-4326-9B6D-3F1C0EE01CAE}|..\\Lab03\\Lab03.csproj|d:\\01.du work\\asp.net-core\\lab03\\classes\\interfaceshape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD3AE5EB-715E-4326-9B6D-3F1C0EE01CAE}|..\\Lab03\\Lab03.csproj|d:\\01.du work\\asp.net-core\\lab03\\classes\\sum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B03FCFE-71D2-414A-A8BF-77447518D4F5}|..\\Lab04\\Lab04.csproj|d:\\01.du work\\asp.net-core\\lab04\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,71 +20,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Sum.cs",
-              "DocumentMoniker": "D:\\01.DU Work\\ASP.NET-Core\\Lab03\\Classes\\Sum.cs",
-              "RelativeDocumentMoniker": "..\\Lab03\\Classes\\Sum.cs",
-              "ToolTip": "D:\\01.DU Work\\ASP.NET-Core\\Lab03\\Classes\\Sum.cs",
-              "RelativeToolTip": "..\\Lab03\\Classes\\Sum.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\01.DU Work\\ASP.NET-Core\\Lab05\\Program.cs",
+              "RelativeDocumentMoniker": "..\\Lab05\\Program.cs",
+              "ToolTip": "D:\\01.DU Work\\ASP.NET-Core\\Lab05\\Program.cs",
+              "RelativeToolTip": "..\\Lab05\\Program.cs",
+              "ViewState": "AgIAAM8AAAAAAAAAAAAwwN4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T05:02:44.615Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "InterfaceShape.cs",
-              "DocumentMoniker": "D:\\01.DU Work\\ASP.NET-Core\\Lab03\\Classes\\InterfaceShape.cs",
-              "RelativeDocumentMoniker": "..\\Lab03\\Classes\\InterfaceShape.cs",
-              "ToolTip": "D:\\01.DU Work\\ASP.NET-Core\\Lab03\\Classes\\InterfaceShape.cs",
-              "RelativeToolTip": "..\\Lab03\\Classes\\InterfaceShape.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T05:02:29.172Z",
+              "WhenOpened": "2025-06-24T13:59:46.459Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CalculateInterface.cs",
-              "DocumentMoniker": "D:\\01.DU Work\\ASP.NET-Core\\Lab03\\Classes\\CalculateInterface.cs",
-              "RelativeDocumentMoniker": "..\\Lab03\\Classes\\CalculateInterface.cs",
-              "ToolTip": "D:\\01.DU Work\\ASP.NET-Core\\Lab03\\Classes\\CalculateInterface.cs",
-              "RelativeToolTip": "..\\Lab03\\Classes\\CalculateInterface.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\01.DU Work\\ASP.NET-Core\\Lab04\\Program.cs",
+              "RelativeDocumentMoniker": "..\\Lab04\\Program.cs",
+              "ToolTip": "D:\\01.DU Work\\ASP.NET-Core\\Lab04\\Program.cs",
+              "RelativeToolTip": "..\\Lab04\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T05:02:20.845Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-24T13:54:54.691Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Calculate.cs",
-              "DocumentMoniker": "D:\\01.DU Work\\ASP.NET-Core\\Lab03\\Classes\\Calculate.cs",
-              "RelativeDocumentMoniker": "..\\Lab03\\Classes\\Calculate.cs",
-              "ToolTip": "D:\\01.DU Work\\ASP.NET-Core\\Lab03\\Classes\\Calculate.cs",
-              "RelativeToolTip": "..\\Lab03\\Classes\\Calculate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T05:02:11.764Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\01.DU Work\\ASP.NET-Core\\Lab03\\Program.cs",
-              "RelativeDocumentMoniker": "..\\Lab03\\Program.cs",
-              "ToolTip": "D:\\01.DU Work\\ASP.NET-Core\\Lab03\\Program.cs",
-              "RelativeToolTip": "..\\Lab03\\Program.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAQwFcAAAAlAAAAAAAAAA==",
+              "DocumentMoniker": "D:\\01.DU Work\\ASP.NET-Core\\InitialLabs\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\01.DU Work\\ASP.NET-Core\\InitialLabs\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T04:59:31.508Z",
+              "WhenOpened": "2025-06-24T13:47:10.759Z",
               "EditorCaption": ""
             }
           ]
