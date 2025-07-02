@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\01.DU Work\\ASP.NET-Core\\Project\\HMS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DEFAF850-3904-480B-8769-BF9FEA2313CE}|HMS.csproj|d:\\01.du work\\asp.net-core\\project\\hms\\views\\patient\\patientaddedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEFAF850-3904-480B-8769-BF9FEA2313CE}|HMS.csproj|solutionrelative:views\\patient\\patientaddedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEFAF850-3904-480B-8769-BF9FEA2313CE}|HMS.csproj|d:\\01.du work\\asp.net-core\\project\\hms\\views\\doctordepartment\\doctordepartmentaddedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEFAF850-3904-480B-8769-BF9FEA2313CE}|HMS.csproj|solutionrelative:views\\doctordepartment\\doctordepartmentaddedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEFAF850-3904-480B-8769-BF9FEA2313CE}|HMS.csproj|d:\\01.du work\\asp.net-core\\project\\hms\\views\\doctor\\doctoraddedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEFAF850-3904-480B-8769-BF9FEA2313CE}|HMS.csproj|solutionrelative:views\\doctor\\doctoraddedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEFAF850-3904-480B-8769-BF9FEA2313CE}|HMS.csproj|d:\\01.du work\\asp.net-core\\project\\hms\\views\\department\\departmentaddedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEFAF850-3904-480B-8769-BF9FEA2313CE}|HMS.csproj|solutionrelative:views\\department\\departmentaddedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEFAF850-3904-480B-8769-BF9FEA2313CE}|HMS.csproj|d:\\01.du work\\asp.net-core\\project\\hms\\views\\appointment\\appointmentaddedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEFAF850-3904-480B-8769-BF9FEA2313CE}|HMS.csproj|solutionrelative:views\\appointment\\appointmentaddedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEFAF850-3904-480B-8769-BF9FEA2313CE}|HMS.csproj|d:\\01.du work\\asp.net-core\\project\\hms\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEFAF850-3904-480B-8769-BF9FEA2313CE}|HMS.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PatientAddEdit.cshtml",
+              "DocumentMoniker": "D:\\01.DU Work\\ASP.NET-Core\\Project\\HMS\\Views\\Patient\\PatientAddEdit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Patient\\PatientAddEdit.cshtml",
+              "ToolTip": "D:\\01.DU Work\\ASP.NET-Core\\Project\\HMS\\Views\\Patient\\PatientAddEdit.cshtml*",
+              "RelativeToolTip": "Views\\Patient\\PatientAddEdit.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-02T15:05:07.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DoctorDepartmentAddEdit.cshtml",
+              "DocumentMoniker": "D:\\01.DU Work\\ASP.NET-Core\\Project\\HMS\\Views\\DoctorDepartment\\DoctorDepartmentAddEdit.cshtml",
+              "RelativeDocumentMoniker": "Views\\DoctorDepartment\\DoctorDepartmentAddEdit.cshtml",
+              "ToolTip": "D:\\01.DU Work\\ASP.NET-Core\\Project\\HMS\\Views\\DoctorDepartment\\DoctorDepartmentAddEdit.cshtml*",
+              "RelativeToolTip": "Views\\DoctorDepartment\\DoctorDepartmentAddEdit.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-02T15:04:59.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DoctorAddEdit.cshtml",
+              "DocumentMoniker": "D:\\01.DU Work\\ASP.NET-Core\\Project\\HMS\\Views\\Doctor\\DoctorAddEdit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Doctor\\DoctorAddEdit.cshtml",
+              "ToolTip": "D:\\01.DU Work\\ASP.NET-Core\\Project\\HMS\\Views\\Doctor\\DoctorAddEdit.cshtml*",
+              "RelativeToolTip": "Views\\Doctor\\DoctorAddEdit.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-02T15:04:49.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DepartmentAddEdit.cshtml",
+              "DocumentMoniker": "D:\\01.DU Work\\ASP.NET-Core\\Project\\HMS\\Views\\Department\\DepartmentAddEdit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Department\\DepartmentAddEdit.cshtml",
+              "ToolTip": "D:\\01.DU Work\\ASP.NET-Core\\Project\\HMS\\Views\\Department\\DepartmentAddEdit.cshtml*",
+              "RelativeToolTip": "Views\\Department\\DepartmentAddEdit.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-02T15:04:40.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AppointmentAddEdit.cshtml",
+              "DocumentMoniker": "D:\\01.DU Work\\ASP.NET-Core\\Project\\HMS\\Views\\Appointment\\AppointmentAddEdit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Appointment\\AppointmentAddEdit.cshtml",
+              "ToolTip": "D:\\01.DU Work\\ASP.NET-Core\\Project\\HMS\\Views\\Appointment\\AppointmentAddEdit.cshtml*",
+              "RelativeToolTip": "Views\\Appointment\\AppointmentAddEdit.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-02T15:03:52.794Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\01.DU Work\\ASP.NET-Core\\Project\\HMS\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\01.DU Work\\ASP.NET-Core\\Project\\HMS\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAC0BAAAAAAAAAADwvzMBAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-02T13:40:40.791Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
