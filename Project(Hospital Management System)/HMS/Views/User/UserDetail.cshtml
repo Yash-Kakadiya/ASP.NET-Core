@@ -1,9 +1,42 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <title>User Detail</title>
-</head>
-<body>
-    <h1>User Detail</h1>
-</body>
+﻿@model DataRow  
+@using System.Data  
+@{  
+    Layout = "~/Views/Shared/_Layout.cshtml";  
+}  
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>User Detail</title>  
+</head>  
+<body>  
+
+    <div class="container mt-5">  
+        <div class="card shadow-lg rounded-4">  
+            <div class="card-header bg-primary text-white rounded-top-4">  
+                <h4 class="mb-0"><i class="bx bx-user me-2"></i> User Details</h4>  
+            </div>  
+
+            <div class="card-body">  
+                <dl class="row fs-5">  
+                    <dt class="col-sm-3">User ID:</dt>  
+                    <dd class="col-sm-9">@Model["UserID"]</dd>  
+
+                    <dt class="col-sm-3">Name:</dt>  
+                    <dd class="col-sm-9">@Model["UserName"]</dd>  
+
+                    <dt class="col-sm-3">Email:</dt>  
+                    <dd class="col-sm-9">@Model["Email"]</dd>  
+
+                    <dt class="col-sm-3">Mobile No:</dt>  
+                    <dd class="col-sm-9">@Model["MobileNo"]</dd>  
+                </dl>  
+
+                <a href="@Url.Action("UserList", "User")" class="btn btn-secondary mt-3">  
+                    <i class="bx bx-arrow-back"></i> Back to List  
+                </a>  
+            </div>  
+        </div>  
+    </div>  
+
+</body>  
 </html>

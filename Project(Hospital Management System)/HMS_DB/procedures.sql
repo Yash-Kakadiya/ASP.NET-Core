@@ -64,7 +64,7 @@ END
 CREATE OR ALTER PROC PR_User_SelectAll
 AS
 BEGIN
-    SELECT U.UserName, U.Password, U.Email, U.MobileNo, U.IsActive, U.Created, U.Modified
+    SELECT U.UserID, U.UserName, U.Password, U.Email, U.MobileNo, U.IsActive, U.Created, U.Modified
     FROM [User] AS U;
 END
 
@@ -74,7 +74,7 @@ CREATE OR ALTER PROC PR_User_SelectByID
     @UserID INT
 AS
 BEGIN
-    SELECT U.UserName, U.Password, U.Email, U.MobileNo, U.IsActive, U.Created, U.Modified
+    SELECT U.UserID, U.UserName, U.Password, U.Email, U.MobileNo, U.IsActive, U.Created, U.Modified
     FROM [User] AS U
     WHERE UserID = @UserID;
 END
