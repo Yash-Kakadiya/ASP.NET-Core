@@ -1,42 +1,87 @@
-﻿@model DataRow  
-@using System.Data  
-@{  
-    Layout = "~/Views/Shared/_Layout.cshtml";  
-}  
-<!DOCTYPE html>  
-<html>  
-<head>  
-    <title>User Detail</title>  
-</head>  
-<body>  
+﻿@model DataRow
+@using System.Data
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    bool isActive = Model["IsActive"] != DBNull.Value && Convert.ToBoolean(Model["IsActive"]);
+    DateTime? created = Model["Created"] != DBNull.Value ? Convert.ToDateTime(Model["Created"]) : (DateTime?)null;
+    DateTime? modified = Model["Modified"] != DBNull.Value ? Convert.ToDateTime(Model["Modified"]) : (DateTime?)null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Detail</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <style>
+        .user-detail-label {
+            font-weight: 600;
+        }
 
-    <div class="container mt-5">  
-        <div class="card shadow-lg rounded-4">  
-            <div class="card-header bg-primary text-white rounded-top-4">  
-                <h4 class="mb-0"><i class="bx bx-user me-2"></i> User Details</h4>  
-            </div>  
+        .user-detail-value {
+            word-break: break-all;
+        }
 
-            <div class="card-body">  
-                <dl class="row fs-5">  
-                    <dt class="col-sm-3">User ID:</dt>  
-                    <dd class="col-sm-9">@Model["UserID"]</dd>  
+        .status-active {
+            color: #198754;
+            font-weight: bold;
+        }
 
-                    <dt class="col-sm-3">Name:</dt>  
-                    <dd class="col-sm-9">@Model["UserName"]</dd>  
+        .status-inactive {
+            color: #dc3545;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card shadow-lg rounded-4">
+            <div class="card-header bg-primary text-white rounded-top-4 d-flex align-items-center">
+                <i class="bi bi-person-circle fs-2 me-3"></i>
+                <h4 class="mb-0">User Details</h4>
+            </div>
+            <div class="card-body">
+                <dl class="row fs-5">
+                    <dt class="col-sm-3 user-detail-label"><i class="bi bi-hash"></i> User ID:</dt>
+                    <dd class="col-sm-9 user-detail-value">@Model["UserID"]</dd>
 
-                    <dt class="col-sm-3">Email:</dt>  
-                    <dd class="col-sm-9">@Model["Email"]</dd>  
+                    <dt class="col-sm-3 user-detail-label"><i class="bi bi-person"></i> Name:</dt>
+                    <dd class="col-sm-9 user-detail-value">@Model["UserName"]</dd>
 
-                    <dt class="col-sm-3">Mobile No:</dt>  
-                    <dd class="col-sm-9">@Model["MobileNo"]</dd>  
-                </dl>  
+                    <dt class="col-sm-3 user-detail-label"><i class="bi bi-envelope"></i> Email:</dt>
+                    <dd class="col-sm-9 user-detail-value">@Model["Email"]</dd>
 
-                <a href="@Url.Action("UserList", "User")" class="btn btn-secondary mt-3">  
-                    <i class="bx bx-arrow-back"></i> Back to List  
-                </a>  
-            </div>  
-        </div>  
-    </div>  
+                    <dt class="col-sm-3 user-detail-label"><i class="bi bi-phone"></i> Mobile No:</dt>
+                    <dd class="col-sm-9 user-detail-value">@Model["MobileNo"]</dd>
 
-</body>  
+                    <dt class="col-sm-3 user-detail-label"><i class="bi bi-key"></i> Password:</dt>
+                    <dd class="col-sm-9 user-detail-value text-muted">@Model["Password"]</dd>
+
+                    <dt class="col-sm-3 user-detail-label"><i class="bi bi-check-circle"></i> Status:</dt>
+                    <dd class="col-sm-9 user-detail-value">
+                        @if (isActive)
+                        {
+                            <span class="status-active"><i class="bi bi-toggle-on"></i> Active</span>
+                        }
+                        else
+                        {
+                            <span class="status-inactive"><i class="bi bi-toggle-off"></i> Inactive</span>
+                        }
+                    </dd>
+
+                    <dt class="col-sm-3 user-detail-label"><i class="bi bi-calendar-plus"></i> Created:</dt>
+                    <dd class="col-sm-9 user-detail-value">
+                        @(created.HasValue? created.Value.ToString("yyyy-MM-dd HH:mm") : "-")
+                    </dd>
+
+                    <dt class="col-sm-3 user-detail-label"><i class="bi bi-calendar-check"></i> Modified:</dt>
+                    <dd class="col-sm-9 user-detail-value">
+                        @(modified.HasValue? modified.Value.ToString("yyyy-MM-dd HH:mm") : "-")
+                    </dd>
+                </dl>
+                <a href="@Url.Action("UserList", "User")" class="btn btn-secondary mt-3">
+                    <i class="bi bi-arrow-left"></i> Back to List
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
 </html>

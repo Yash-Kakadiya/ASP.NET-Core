@@ -99,7 +99,6 @@ namespace HMS.Controllers
         {
             if (!ModelState.IsValid)
             {
-                Console.WriteLine( "Ok");
                 return View(userModel);
             }
 
