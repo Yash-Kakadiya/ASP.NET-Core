@@ -1,9 +1,113 @@
-﻿<!DOCTYPE html>
-<html>
+﻿@model PatientModel
+
+@* public int PatientID { get; set; }
+    public string PatientName { get; set; }
+    public DateTime DateOfBirth { get; set; }
+    public string Gender { get; set; }
+    public string Email { get; set; }
+    public string Phone { get; set; }
+    public string Address { get; set; }
+    public string City { get; set; }
+    public string State { get; set; }
+    public bool IsActive { get; set; }
+    public DateTime Created { get; set; }
+    public DateTime Modified { get; set; }
+    public int UserID { get; set; } *@
+
+<!doctype html>
+<html lang="en">
 <head>
-    <title>Patient Add/Edit Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@(Model.PatientID == 0 ? "Add" : "Edit") Patient</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Patient Add/Edit Form</h1>
+    <div class="card shadow-sm rounded-3 m-4">
+        <div class="card-header bg-info text-white d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">@(Model.PatientID == 0 ? "Add" : "Edit") Patient</h5>
+            <a asp-controller="Patient" asp-action="PatientList" class="btn btn-light btn-sm">Back to List</a>
+        </div>
+        <div class="card-body">
+            <form method="post" asp-controller="Patient" asp-action="PatientAddEdit">
+                <input type="hidden" name="PatientID" value="@Model.PatientID" />
+
+                <div class="mb-3">
+                    <label class="form-label">Patient Name</label>
+                    <input type="text" class="form-control" name="PatientName" placeholder="Enter Patient Name" value="@Model.PatientName" required />
+                </div>
+
+
+                <div class="mb-3">
+                    <label class="form-label">Date of Birth</label>
+                    <input type="date" class="form-control" name="DateOfBirth" value="@Model.DateOfBirth.ToString("yyyy-MM-dd")"
+                           min="1900-01-01"
+                           max="2025-07-01" required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Gender</label>
+                    <select class="form-select" name="Gender" required>
+                        <option value="">-- Select Gender --</option>
+                        <option value="Male" selected="@(Model.Gender == "Male")">Male</option>
+                        <option value="Female" selected="@(Model.Gender == "Female")">Female</option>
+                        <option value="Other" selected="@(Model.Gender == "Other")">Other</option>
+                    </select>
+                </div>
+
+
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" name="Email" placeholder="Enter Email" value="@Model.Email" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Phone No</label>
+                    <input type="text" class="form-control" name="Phone" placeholder="Enter Phone Number" value="@Model.Phone" pattern="[0-9]{10}" required />
+                </div>
+
+
+                <div class="mb-3">
+                    <label class="form-label">Address</label>
+                    <textarea class="form-control" name="Address" placeholder="Enter Address">@Model.Address</textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">City</label>
+                    <input type="text" class="form-control" name="City" placeholder="Enter City" value="@Model.City" required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">State</label>
+                    <input type="text" class="form-control" name="State" placeholder="Enter State" value="@Model.State" required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Select User</label>
+                    <select class="form-select" name="UserID" required>
+                        <option value="" selected disabled>-- Select User --</option>
+                        @if (ViewBag.UserList != null)
+                        {
+                            foreach (dynamic user in ViewBag.UserList)
+                            {
+                                <option value="@user.UserID" selected="@(user.UserID == Model.UserID ? "selected" : null)">
+                                    @user.UserName
+                                </option>
+                            }
+                        }
+                    </select>
+                </div>
+
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" name="IsActive" value="true" @(Model.IsActive ? "checked" : "") />
+                    <label class="form-check-label">Is Active</label>
+                </div>
+
+
+                <button type="submit" class="btn btn-success">Save</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

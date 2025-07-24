@@ -3,18 +3,17 @@
     public class UserModel
     {
         /*CREATE TABLE [User]
-  (
-      UserID INT PRIMARY KEY IDENTITY(1,1),
-      UserName NVARCHAR(100) NOT NULL,
-      Password NVARCHAR(100) NOT NULL,
-      Email NVARCHAR(100) NOT NULL,
-      MobileNo NVARCHAR(100) NOT NULL,
-      IsActive BIT NOT NULL DEFAULT 1,
-      Created DATETIME DEFAULT GETDATE(),
-      Modified DATETIME NOT NULL
-  );
+          (
+              UserID INT PRIMARY KEY IDENTITY(1,1),
+              UserName NVARCHAR(100) NOT NULL,
+              Password NVARCHAR(100) NOT NULL,
+              Email NVARCHAR(100) NOT NULL,
+              MobileNo NVARCHAR(100) NOT NULL,
+              IsActive BIT NOT NULL DEFAULT 1,
+              Created DATETIME DEFAULT GETDATE(),
+              Modified DATETIME NOT NULL
+          );
          */
-
 
         public int UserID { get; set; }
         public string UserName { get; set; }

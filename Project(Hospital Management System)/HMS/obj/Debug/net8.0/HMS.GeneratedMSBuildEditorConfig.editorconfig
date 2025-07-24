@@ -72,6 +72,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXERvY3Rvckxpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/01. Github/ASP.NET-Core/Project(Hospital Management System)/HMS/Views/Employee/EmployeeAddEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRW1wbG95ZWVBZGRFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/01. Github/ASP.NET-Core/Project(Hospital Management System)/HMS/Views/Employee/EmployeeDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRW1wbG95ZWVEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/01. Github/ASP.NET-Core/Project(Hospital Management System)/HMS/Views/Employee/EmployeeList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRW1wbG95ZWVMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/01. Github/ASP.NET-Core/Project(Hospital Management System)/HMS/Views/Patient/PatientAddEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxQYXRpZW50QWRkRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

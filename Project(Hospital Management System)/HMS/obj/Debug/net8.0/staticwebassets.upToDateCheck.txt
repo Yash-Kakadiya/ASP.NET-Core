@@ -17,6 +17,8 @@ wwwroot\assets\img\product-2.jpg
 wwwroot\assets\img\product-3.jpg
 wwwroot\assets\img\product-4.jpg
 wwwroot\assets\img\product-5.jpg
+wwwroot\assets\img\profile-img.jpg
+wwwroot\assets\img\profile_gif.gif
 wwwroot\assets\img\slides-1.jpg
 wwwroot\assets\img\slides-2.jpg
 wwwroot\assets\img\slides-3.jpg
@@ -494,5 +496,3 @@ wwwroot\assets\vendor\tinymce\themes\silver\theme.min.js
 wwwroot\assets\vendor\tinymce\tinymce.d.ts
 wwwroot\assets\vendor\tinymce\tinymce.js
 wwwroot\assets\vendor\tinymce\tinymce.min.js
-wwwroot\assets\img\profile_gif.gif
-wwwroot\assets\img\profile-img.jpg

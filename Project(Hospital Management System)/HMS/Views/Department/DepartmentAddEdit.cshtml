@@ -1,9 +1,64 @@
-﻿<!DOCTYPE html>
-<html>
+﻿@model DepartmentModel
+@* public int DepartmentID { get; set; }
+    public string DepartmentName { get; set; }
+    public string Description { get; set; }
+    public bool IsActive { get; set; }
+    public DateTime Created { get; set; }
+    public DateTime Modified { get; set; }
+    public int UserID { get; set; } *@
+<!doctype html>
+<html lang="en">
 <head>
-    <title>Department Add/Edit Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@(Model.DepartmentID == 0 ? "Add" : "Edit") Department</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Department Add/Edit Form</h1>
+    <div class="card shadow-sm rounded-3 m-4">
+        <div class="card-header bg-info text-white d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">@(Model.DepartmentID == 0 ? "Add" : "Edit") Department</h5>
+            <a asp-action="DepartmentList" asp-controller="Department" class="btn btn-light btn-sm">Back to List</a>
+        </div>
+        <div class="card-body">
+            <form method="post" asp-controller="Department" asp-action="DepartmentAddEdit">
+                <input type="hidden" name="DepartmentID" value="@Model.DepartmentID" />
+
+                <div class="mb-3">
+                    <label class="form-label">Department Name</label>
+                    <input type="text" class="form-control" name="DepartmentName" placeholder="Enter Department Name" value="@Model.DepartmentName" required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Description</label>
+                    <textarea class="form-control" name="Description" placeholder="Enter Description" >@Model.Description</textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Select User</label>
+                    <select class="form-select" name="UserID" required>
+                        <option value="" selected disabled>-- Select User --</option>
+                        @if (ViewBag.UserList != null)
+                        {
+                            foreach (dynamic user in ViewBag.UserList)
+                            {
+                                <option value="@user.UserID" selected="@(user.UserID == Model.UserID ? "selected" : null)">
+                                    @user.UserName
+                                </option>
+                            }
+                        }
+                    </select>
+                </div>
+
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" name="IsActive" value="true" @(Model.IsActive ? "checked" : "") />
+                    <label class="form-check-label">Is Active</label>
+                </div>
+
+                <button type="submit" class="btn btn-success">Save</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -1,5 +1,12 @@
-﻿@model HMS.Models.UserModel
-
+﻿@model UserModel
+    @* public int UserID { get; set; }
+    public string UserName { get; set; }
+    public string Password { get; set; }
+    public string Email { get; set; }
+    public string MobileNo { get; set; }
+    public bool IsActive { get; set; }
+    public DateTime Created { get; set; }
+    public DateTime Modified { get; set; } *@
 <!doctype html>
 <html lang="en">
 <head>
@@ -11,8 +18,8 @@
 <body>
     <div class="card shadow-sm rounded-3 m-4">
         <div class="card-header bg-info text-white d-flex justify-content-between align-items-center">
-            <h5 class="mb-0">Add/Edit User</h5>
-            <a href="/User/UserList" class="btn btn-light btn-sm">Back to List</a>
+            <h5 class="mb-0">@(Model.UserID == 0 ? "Add" : "Edit") User</h5>
+            <a asp-controller="User" asp-action="UserList" class="btn btn-light btn-sm">Back to List</a>
         </div>
         <div class="card-body">
             <form method="post" asp-controller="User" asp-action="UserAddEdit">
@@ -30,12 +37,12 @@
 
                 <div class="mb-3">
                     <label class="form-label">Email</label>
-                    <input type="email" class="form-control" name="Email" placeholder="Enter Email" value="@Model.Email" />
+                    <input type="email" class="form-control" name="Email" placeholder="Enter Email" value="@Model.Email" pattern="[a-z0-9._%+-]+@@[a-z0-9.-]+\.[a-z]{2,}$" required />
                 </div>
 
                 <div class="mb-3">
                     <label class="form-label">Mobile No</label>
-                    <input type="text" class="form-control" name="MobileNo" placeholder="Enter Mobile Number" value="@Model.MobileNo" />
+                    <input type="text" class="form-control" name="MobileNo" placeholder="Enter Mobile Number" value="@Model.MobileNo" pattern="[0-9]{10}" required/>
                 </div>
 
                 <div class="form-check mb-3">
@@ -43,7 +50,7 @@
                     <label class="form-check-label">Is Active</label>
                 </div>
 
-                <button type="submit" class="btn btn-success">Save</button>
+                <button type="submit" class="btn btn-success">@(Model.UserID == 0 ? "Add User" : "Save Changes")</button>
             </form>
         </div>
     </div>

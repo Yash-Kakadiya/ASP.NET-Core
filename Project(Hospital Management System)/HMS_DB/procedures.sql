@@ -24,7 +24,7 @@ END
 
 -- Update
 /*
-EXEC PR_User_Update @UserID = 1,
+EXEC PR_User_Update @UserID = 2,
                     @UserName = 'Yash',
                     @Password = 'newpassword123',
                     @Email = 'abc@google.com',
@@ -51,7 +51,7 @@ BEGIN
 END
 
 -- Delete
--- EXEC PR_User_Delete @UserID = 1;
+-- EXEC PR_User_Delete @UserID = 2;
 CREATE OR ALTER PROC PR_User_Delete
     @UserID INT
 AS
@@ -69,7 +69,7 @@ BEGIN
 END
 
 -- Select By ID
--- EXEC PR_User_SelectByID @UserID = 1;
+-- EXEC PR_User_SelectByID @UserID = 2;
 CREATE OR ALTER PROC PR_User_SelectByID
     @UserID INT
 AS
@@ -86,7 +86,7 @@ END
 EXEC PR_Department_Insert @DepartmentName = 'abc',
                           @Description = 'asd',
                           @IsActive = 1,
-                          @UserID = 1;
+                          @UserID = 2;
 */
 CREATE OR ALTER PROC PR_Department_Insert
     @DepartmentName NVARCHAR(100),
@@ -102,11 +102,11 @@ BEGIN
 END
 
 -- Update
-/* EXEC PR_Department_Update @DepartmentID = 1,
+/* EXEC PR_Department_Update @DepartmentID = 3,
                           @DepartmentName = 'xyz',
                           @Description = 'qwe',
                           @IsActive = 0,
-                          @UserID = 1;
+                          @UserID = 2;
 */
 CREATE OR ALTER PROC PR_Department_Update
     @DepartmentID INT,
@@ -126,7 +126,7 @@ BEGIN
 END
 
 -- Delete
--- EXEC PR_Department_Delete @DepartmentID = 1;
+-- EXEC PR_Department_Delete @DepartmentID = 3;
 CREATE OR ALTER PROC PR_Department_Delete
     @DepartmentID INT
 AS
@@ -145,12 +145,12 @@ BEGIN
 END
 
 -- Select By ID
--- EXEC PR_Department_SelectByID @DepartmentID = 1;
+-- EXEC PR_Department_SelectByID @DepartmentID = 3;
 CREATE OR ALTER PROC PR_Department_SelectByID
     @DepartmentID INT
 AS
 BEGIN
-    SELECT D.DepartmentID, D.DepartmentName, D.Description, D.IsActive, D.Created, D.Modified, U.UserName, U.Email, U.MobileNo
+    SELECT D.DepartmentID, D.DepartmentName, D.Description, D.IsActive, D.Created, D.Modified, U.UserID, U.UserName, U.Email, U.MobileNo
     FROM Department AS D JOIN [User] AS U
         ON D.UserID = U.UserID
     WHERE DepartmentID = @DepartmentID;
@@ -160,16 +160,16 @@ END
 
 -- Insert
 /*
-EXEC PR_Doctor_Insert @Name = 'abc',
+EXEC PR_Doctor_Insert @DoctorName = 'abc',
                       @Phone = '1234567890',
                       @Email = 'abc@google.com',
                       @Qualification = 'zxc',
                       @Specialization = 'asdf',
                       @IsActive = 1,
-                      @UserID = 1;
+                      @UserID = 2;
 */
 CREATE OR ALTER PROC PR_Doctor_Insert
-    @Name NVARCHAR(100),
+    @DoctorName NVARCHAR(100),
     @Phone NVARCHAR(20),
     @Email NVARCHAR(100),
     @Qualification NVARCHAR(100),
@@ -179,25 +179,25 @@ CREATE OR ALTER PROC PR_Doctor_Insert
 AS
 BEGIN
     INSERT INTO Doctor
-        (Name, Phone, Email, Qualification, Specialization, IsActive, Created, Modified, UserID)
+        (DoctorName, Phone, Email, Qualification, Specialization, IsActive, Created, Modified, UserID)
     VALUES
-        (@Name, @Phone, @Email, @Qualification, @Specialization, @IsActive, GETDATE(), GETDATE(), @UserID);
+        (@DoctorName, @Phone, @Email, @Qualification, @Specialization, @IsActive, GETDATE(), GETDATE(), @UserID);
 END
 
 -- Update
 /*
 EXEC PR_Doctor_Update @DoctorID = 1,
-                      @Name = 'xyz',
+                      @DoctorName = 'xyz',
                       @Phone = '0987654321',
                       @Email = 'abc@google.com',
                       @Qualification = 'zxc',
                       @Specialization = 'asdf',
                       @IsActive = 1,
-                      @UserID = 1;
+                      @UserID = 2;
 */
 CREATE OR ALTER PROC PR_Doctor_Update
     @DoctorID INT,
-    @Name NVARCHAR(100),
+    @DoctorName NVARCHAR(100),
     @Phone NVARCHAR(20),
     @Email NVARCHAR(100),
     @Qualification NVARCHAR(100),
@@ -207,7 +207,7 @@ CREATE OR ALTER PROC PR_Doctor_Update
 AS
 BEGIN
     UPDATE Doctor
-    SET Name = @Name,
+    SET DoctorName = @DoctorName,
         Phone = @Phone,
         Email = @Email,
         Qualification = @Qualification,
@@ -232,7 +232,7 @@ END
 CREATE OR ALTER PROC PR_Doctor_SelectAll
 AS
 BEGIN
-    SELECT D.Name, D.Phone, D.Email, D.Qualification, D.Specialization, D.IsActive, D.Created, D.Modified, U.UserName, U.Email, U.MobileNo
+    SELECT D.DoctorID, D.DoctorName, D.Phone, D.Email, D.Qualification, D.Specialization, D.IsActive, D.Created, D.Modified, U.UserName, U.Email, U.MobileNo
     FROM Doctor AS D JOIN [User] AS U
         ON D.UserID = U.UserID;
 END
@@ -243,7 +243,7 @@ CREATE OR ALTER PROC PR_Doctor_SelectByID
     @DoctorID INT
 AS
 BEGIN
-    SELECT D.Name, D.Phone, D.Email, D.Qualification, D.Specialization, D.IsActive, D.Created, D.Modified, U.UserName, U.Email, U.MobileNo
+    SELECT D.DoctorID, D.DoctorName, D.Phone, D.Email, D.Qualification, D.Specialization, D.IsActive, D.Created, D.Modified, U.UserName, U.Email, U.MobileNo, U.UserID
     FROM Doctor AS D JOIN [User] AS U
         ON D.UserID = U.UserID
     WHERE DoctorID = @DoctorID;
@@ -254,8 +254,8 @@ END
 -- Insert
 /*
 EXEC PR_DoctorDepartment_Insert @DoctorID = 1,
-                                 @DepartmentID = 1,
-                                 @UserID = 1;
+                                 @DepartmentID = 3,
+                                 @UserID = 2;
 */
 CREATE OR ALTER PROC PR_DoctorDepartment_Insert
     @DoctorID INT,
@@ -273,8 +273,8 @@ END
 /*
 EXEC PR_DoctorDepartment_Update @DoctorDepartmentID = 1,
                                  @DoctorID = 1,
-                                 @DepartmentID = 1,
-                                 @UserID = 1;
+                                 @DepartmentID = 3,
+                                 @UserID = 2;
 */
 CREATE OR ALTER PROC PR_DoctorDepartment_Update
     @DoctorDepartmentID INT,
@@ -306,7 +306,7 @@ CREATE OR ALTER PROC PR_DoctorDepartment_SelectAll
 AS
 BEGIN
     SELECT DD.DoctorDepartmentID, DD.DoctorID, DD.DepartmentID, DD.Created, DD.Modified,
-        D.Name AS DoctorName, Dept.DepartmentName AS DepartmentName, U.UserName AS UserName
+        D.DoctorName AS DoctorName, Dept.DepartmentName AS DepartmentName, U.UserName AS UserName
     FROM DoctorDepartment AS DD JOIN Doctor AS D
         ON DD.DoctorID = D.DoctorID JOIN Department AS Dept
         ON DD.DepartmentID = Dept.DepartmentID JOIN [User] AS U
@@ -319,8 +319,8 @@ CREATE OR ALTER PROC PR_DoctorDepartment_SelectByID
     @DoctorDepartmentID INT
 AS
 BEGIN
-    SELECT DD.DoctorDepartmentID, DD.DoctorID, DD.DepartmentID, DD.Created, DD.Modified,
-        D.Name AS DoctorName, Dept.DepartmentName AS DepartmentName, U.UserName AS UserName
+    SELECT DD.DoctorDepartmentID, DD.DoctorID, DD.DepartmentID,DD.UserID, DD.Created, DD.Modified,
+        D.DoctorName AS DoctorName, Dept.DepartmentName AS DepartmentName, U.UserName AS UserName
     FROM DoctorDepartment AS DD JOIN Doctor AS D
         ON DD.DoctorID = D.DoctorID JOIN Department AS Dept
         ON DD.DepartmentID = Dept.DepartmentID JOIN [User] AS U
@@ -332,7 +332,7 @@ END
 
 -- Insert
 /*
-EXEC PR_Patient_Insert @Name = 'Yash',
+EXEC PR_Patient_Insert @PatientName = 'Yash',
                        @Phone = '1234567890',
                        @Email = 'ab@google.com',
                        @Address = '123 Street',
@@ -341,10 +341,10 @@ EXEC PR_Patient_Insert @Name = 'Yash',
                        @City = 'Rajkot',
                        @State = 'Gujarat',
                        @IsActive = 1,
-                       @UserID = 1;
+                       @UserID = 2;
 */
 CREATE OR ALTER PROC PR_Patient_Insert
-    @Name NVARCHAR(100),
+    @PatientName NVARCHAR(100),
     @Phone NVARCHAR(100),
     @Email NVARCHAR(100),
     @Address NVARCHAR(250),
@@ -357,15 +357,15 @@ CREATE OR ALTER PROC PR_Patient_Insert
 AS
 BEGIN
     INSERT INTO Patient
-        (Name, Phone, Email, Address, DateOfBirth, Gender, City, State, IsActive, Created, Modified, UserID)
+        (PatientName, Phone, Email, Address, DateOfBirth, Gender, City, State, IsActive, Created, Modified, UserID)
     VALUES
-        (@Name, @Phone, @Email, @Address, @DateOfBirth, @Gender, @City, @State, @IsActive, GETDATE(), GETDATE(), @UserID);
+        (@PatientName, @Phone, @Email, @Address, @DateOfBirth, @Gender, @City, @State, @IsActive, GETDATE(), GETDATE(), @UserID);
 END
 
 -- Update
 /*
 EXEC PR_Patient_Update @PatientID = 1,
-                       @Name = 'Yash',
+                       @PatientName = 'Yash',
                        @Phone = '0987654321',
                        @Email = 'yash@google.com',
                        @Address = '123 Street',
@@ -374,11 +374,11 @@ EXEC PR_Patient_Update @PatientID = 1,
                        @City = 'Rajkot',
                        @State = 'Gujarat',
                        @IsActive = 1,
-                       @UserID = 1;
+                       @UserID = 2;
 */
 CREATE OR ALTER PROC PR_Patient_Update
     @PatientID INT,
-    @Name NVARCHAR(100),
+    @PatientName NVARCHAR(100),
     @Phone NVARCHAR(100),
     @Email NVARCHAR(100),
     @Address NVARCHAR(250),
@@ -391,7 +391,7 @@ CREATE OR ALTER PROC PR_Patient_Update
 AS
 BEGIN
     UPDATE Patient
-    SET Name = @Name,
+    SET PatientName = @PatientName,
         Phone = @Phone,
         Email = @Email,
         Address = @Address,
@@ -419,7 +419,7 @@ END
 CREATE OR ALTER PROC PR_Patient_SelectAll
 AS
 BEGIN
-    SELECT P.PatientID, P.Name, P.Phone, P.Email, P.Address, P.DateOfBirth, P.Gender, P.City, P.State, P.IsActive, P.Created, P.Modified, U.UserName, U.Email, U.MobileNo
+    SELECT P.PatientID, P.PatientName, P.Phone, P.Email, P.Address, P.DateOfBirth, P.Gender, P.City, P.State, P.IsActive, P.Created, P.Modified,U.UserId, U.UserName, U.Email, U.MobileNo
     FROM Patient AS P JOIN [User] AS U
         ON P.UserID = U.UserID;
 END
@@ -430,7 +430,7 @@ CREATE OR ALTER PROC PR_Patient_SelectByID
     @PatientID INT
 AS
 BEGIN
-    SELECT P.PatientID, P.Name, P.Phone, P.Email, P.Address, P.DateOfBirth, P.Gender, P.City, P.State, P.IsActive, P.Created, P.Modified, U.UserName, U.Email, U.MobileNo
+    SELECT P.PatientID, P.PatientName, P.Phone, P.Email, P.Address, P.DateOfBirth, P.Gender, P.City, P.State, P.IsActive, P.Created, P.Modified, U.UserID, U.UserName, U.Email, U.MobileNo
     FROM Patient AS P JOIN [User] AS U
         ON P.UserID = U.UserID
     WHERE PatientID = @PatientID;
@@ -446,7 +446,7 @@ EXEC PR_Appointment_Insert @DoctorID = 1,
                            @AppointmentStatus = 'done',
                            @Description = 'asd',
                            @SpecialRemarks = 'N/A',
-                           @UserID = 1,
+                           @UserID = 2,
                            @TotalConsultedAmount = 100.00;
 */
 CREATE OR ALTER PROC PR_Appointment_Insert
@@ -475,7 +475,7 @@ EXEC PR_Appointment_Update @AppointmentID = 1,
                            @AppointmentStatus = 'done',
                            @Description = 'asd',
                            @SpecialRemarks = 'N/A',
-                           @UserID = 1,
+                           @UserID = 2,
                            @TotalConsultedAmount = 100.00;
 */
 CREATE OR ALTER PROC PR_Appointment_Update
@@ -518,7 +518,7 @@ CREATE OR ALTER PROC PR_Appointment_SelectAll
 AS
 BEGIN
     SELECT A.AppointmentID, A.DoctorID, A.PatientID, A.AppointmentDate, A.AppointmentStatus, A.Description, A.SpecialRemarks, A.Created, A.Modified, A.UserID, A.TotalConsultedAmount,
-        D.Name AS DoctorName, P.Name AS PatientName, U.UserName AS UserName
+        D.DoctorName AS DoctorName, P.PatientName AS PatientName, U.UserName AS UserName
     FROM Appointment AS A JOIN Doctor AS D
         ON A.DoctorID = D.DoctorID JOIN Patient AS P
         ON A.PatientID = P.PatientID JOIN [User] AS U
@@ -532,7 +532,7 @@ CREATE OR ALTER PROC PR_Appointment_SelectByID
 AS
 BEGIN
     SELECT A.AppointmentID, A.DoctorID, A.PatientID, A.AppointmentDate, A.AppointmentStatus, A.Description, A.SpecialRemarks, A.Created, A.Modified, A.UserID, A.TotalConsultedAmount,
-        D.Name AS DoctorName, P.Name AS PatientName, U.UserName AS UserName
+        D.DoctorName AS DoctorName, P.PatientName AS PatientName, U.UserName AS UserName
     FROM Appointment AS A JOIN Doctor AS D
         ON A.DoctorID = D.DoctorID JOIN Patient AS P
         ON A.PatientID = P.PatientID JOIN [User] AS U

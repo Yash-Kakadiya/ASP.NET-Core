@@ -284,6 +284,23 @@
             </li>
 
             <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#employee-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-person-gear"></i><span>Employees</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="employee-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a asp-controller="Employee" asp-action="EmployeeList">
+                            <i class="bi bi-circle"></i><span>List</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="Employee" asp-action="EmployeeAddEdit">
+                            <i class="bi bi-circle"></i><span>Add/Edit</span>
+                        </a>
+                    </li>
+                </ul>
+            </li><!-- End Employee Nav -->
+            <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#doctors-nav" data-bs-toggle="collapse" href="#">
                     <i class="bi bi-person-gear"></i><span>Doctors</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
@@ -299,7 +316,7 @@
                         </a>
                     </li>
                 </ul>
-            </li><!-- End Doctorss Nav -->
+            </li><!-- End Doctors Nav -->
 
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#patients-nav" data-bs-toggle="collapse" href="#">

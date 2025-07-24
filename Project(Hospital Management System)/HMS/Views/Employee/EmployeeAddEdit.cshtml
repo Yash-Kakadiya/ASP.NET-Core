@@ -1,0 +1,126 @@
+﻿@model EmployeeModel
+
+@* public int EmployeeID { get; set; }
+    public string FirstName { get; set; } = string.Empty;
+    public string LastName { get; set; } = string.Empty;
+    public string Email { get; set; } = string.Empty;
+    public string PhoneNumber { get; set; } = string.Empty;
+    public DateTime DateOfBirth { get; set; }
+    public string Gender { get; set; }
+    public DateTime HireDate { get; set; }
+    public string JobTitle { get; set; } = string.Empty;
+    public string Department { get; set; } = string.Empty;
+    public decimal Salary { get; set; }
+    public bool IsActive { get; set; } = true;
+    public DateTime CreatedAt { get; set; } = DateTime.Now;
+    public DateTime? UpdatedAt { get; set; } *@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@(Model.EmployeeID == 0 ? "Add" : "Edit") Employee</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="card shadow-sm rounded-3 m-4">
+        <div class="card-header bg-info text-white d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">@(Model.EmployeeID == 0 ? "Add" : "Edit") Employee</h5>
+            <a asp-controller="Employee" asp-action="EmployeeList" class="btn btn-light btn-sm">Back to List</a>
+        </div>
+        <div class="card-body">
+            <form method="post" asp-controller="Employee" asp-action="EmployeeAddEdit">
+                <input type="hidden" name="EmployeeID" value="@Model.EmployeeID" />
+
+                <div class="mb-3">
+                    <label class="form-label">Employee First Name</label>
+                    <input type="text" class="form-control" name="FirstName" placeholder="Enter Employee FirstName" value="@Model.FirstName" required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Last Name</label>
+                    <input type="text" class="form-control" name="LastName" placeholder="Enter Employee Last Name" value="@Model.LastName" required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" name="Email" placeholder="Enter Email" value="@Model.Email" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Mobile No</label>
+                    <input type="text" class="form-control" name="PhoneNumber" placeholder="Enter Phone Number" value="@Model.PhoneNumber" pattern="[0-9]{10}" required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Salary</label>
+                    <input type="number" class="form-control" name="Salary" placeholder="Enter Salary" value="@Model.Salary" step="0.01" required />
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Date of Birth</label>
+                    <input type="date" class="form-control" name="DateOfBirth" value="@Model.DateOfBirth.ToString("yyyy-MM-dd")"
+                           min="1900-01-01"
+                           max="2020-01-01" required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Gender</label>
+                    <select class="form-select" name="Gender" required>  
+                        <option value="">-- Select Gender --</option>  
+                        <option value="Male" selected="@(Model.Gender == "Male")">Male</option>  
+                        <option value="Female" selected="@(Model.Gender == "Female")">Female</option>  
+                        <option value="Other" selected="@(Model.Gender == "Other")">Other</option>  
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Hire Date</label>
+                    <input type="date" class="form-control" name="HireDate" value="@Model.HireDate.ToString("yyyy-MM-dd")"
+                           min="2015-01-01"
+                           max="2025-08-01" required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Job Title</label>
+                    <input type="text" class="form-control" name="JobTitle" placeholder="Enter Job Title" value="@Model.JobTitle" required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Department</label>
+                    <input type="text" class="form-control" name="Department" placeholder="Enter Department" value="@Model.Department" required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Salary</label>
+                    <input type="number" class="form-control" name="Salary" placeholder="Enter Salary" value="@Model.Salary" step="0.01" required />
+                </div>
+
+
+                <div class="mb-3">
+                    <label class="form-label">Created At</label>
+                    <input type="text" class="form-control" value="@Model.CreatedAt.ToString("yyyy-MM-dd HH:mm:ss")" readonly />
+                </div>
+
+                @if (Model.UpdatedAt != null)
+                {
+                    <div class="mb-3">
+                        <label class="form-label">Updated At</label>
+                        <input type="text" class="form-control" value="@Model.UpdatedAt?.ToString("yyyy-MM-dd HH:mm:ss")" readonly />
+                    </div>
+                }
+
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" name="IsActive" value="true" @(Model.IsActive ? "checked" : "") />
+                    <label class="form-check-label">Is Active</label>
+                </div>
+
+
+                <button type="submit" class="btn btn-success">Save</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

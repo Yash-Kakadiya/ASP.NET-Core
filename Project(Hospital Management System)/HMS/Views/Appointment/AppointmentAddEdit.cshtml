@@ -1,9 +1,118 @@
-﻿<!DOCTYPE html>
-<html>
+﻿@model AppointmentModel
+
+@* public int AppointmentID { get; set; }
+    public int AppointmentID { get; set; }
+    public int PatientID { get; set; }
+    public DateTime AppointmentDate { get; set; }
+    public string AppointmentStatus { get; set; }
+    public string Description { get; set; }
+    public string SpecialRemarks { get; set; }
+    public DateTime Created { get; set; }
+    public DateTime Modified { get; set; }
+    public int UserID { get; set; }
+    public decimal? TotalConsultedAmount { get; set; } *@
+
+<!doctype html>
+<html lang="en">
 <head>
-    <title>Appointment Add/Edit Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@(Model.AppointmentID == 0 ? "Add" : "Edit") Appointment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Appointment Add/Edit Form</h1>
+    <div class="card shadow-sm rounded-3 m-4">
+        <div class="card-header bg-info text-white d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">@(Model.AppointmentID == 0 ? "Add" : "Edit") Appointment</h5>
+            <a asp-action="AppointmentList" asp-controller="Appointment" class="btn btn-light btn-sm">Back to List</a>
+        </div>
+        <div class="card-body">
+            <form method="post" asp-controller="Appointment" asp-action="AppointmentAddEdit">
+                <input type="hidden" name="AppointmentID" value="@Model.AppointmentID" />
+
+                <div class="mb-3">
+                    <label class="form-label">Appointment Date</label>
+                    <input type="date" class="form-control" name="AppointmentDate" value="@Model.AppointmentDate.ToString("yyyy-MM-dd")"
+                           min="2025-08-01"
+                           max="2025-12-31" required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Description</label>
+                    <textarea class="form-control" name="Description" placeholder="Enter Description" required>@Model.Description</textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Special Remarks</label>
+                    <input type="text" class="form-control" name="SpecialRemarks" placeholder="Enter SpecialRemarks" value="@Model.SpecialRemarks" required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Select Patient</label>
+                    <select class="form-select" name="PatientID" required>
+                        <option value="" selected disabled>-- Select Patient --</option>
+                        @if (ViewBag.PatientList != null)
+                        {
+                            foreach (dynamic patient in ViewBag.PatientList)
+                            {
+                                <option value="@patient.PatientID" selected="@(patient.PatientID == Model.PatientID ? "selected" : null)">
+                                    @patient.PatientName
+                                </option>
+                            }
+                        }
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Select Doctor</label>
+                    <select class="form-select" name="DoctorID" required>
+                        <option value="" selected disabled>-- Select Doctor --</option>
+                        @if (ViewBag.DoctorList != null)
+                        {
+                            foreach (dynamic doctor in ViewBag.DoctorList)
+                            {
+                                <option value="@doctor.DoctorID" selected="@(doctor.DoctorID == Model.DoctorID ? "selected" : null)">
+                                    @doctor.DoctorName
+                                </option>
+                            }
+                        }
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Select User</label>
+                    <select class="form-select" name="UserID" required>
+                        <option value="" selected disabled>-- Select User --</option>
+                        @if (ViewBag.UserList != null)
+                        {
+                            foreach (dynamic user in ViewBag.UserList)
+                            {
+                                <option value="@user.UserID" selected="@(user.UserID == Model.UserID ? "selected" : null)">
+                                    @user.UserName
+                                </option>
+                            }
+                        }
+                    </select>
+                </div>
+
+                <div class="form-check mb-3 p-0">
+                    <label class="form-label">Select Appointment Status</label>
+                    <select class="form-select" name="AppointmentStatus" required>
+                        <option value="" selected disabled>-- Select Appointment Status --</option>
+                        <option value="Pending" selected="@(Model.AppointmentStatus == "Pending")">Pending</option>
+                        <option value="Confirmed" selected="@(Model.AppointmentStatus == "Confirmed")">Confirmed</option>
+                        <option value="Cancelled" selected="@(Model.AppointmentStatus == "Cancelled")">Cancelled</option>
+
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Total Consulted Amount</label>
+                    <input type="text" class="form-control" name="TotalConsultedAmount" placeholder="Enter TotalConsultedAmount" pattern="^[0-9]+(\.[0-9]+)?$" value="@Model.TotalConsultedAmount" required />
+                </div>
+
+                <button type="submit" class="btn btn-success">Save</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
