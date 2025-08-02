@@ -27,10 +27,11 @@
     <div class="card shadow-sm rounded-3 m-4">
         <div class="card-header bg-info text-white d-flex justify-content-between align-items-center">
             <h5 class="mb-0">@(Model.EmployeeID == 0 ? "Add" : "Edit") Employee</h5>
-            <a asp-controller="Employee" asp-action="EmployeeList" class="btn btn-light btn-sm">Back to List</a>
+            @* <a asp-controller="Employee" asp-action="EmployeeList" class="btn btn-light btn-sm">Back to List</a> *@
+            @Html.ActionLink("Back to List", "EmployeeList", "Employee", null, new { @class = "btn btn-light btn-sm" })
         </div>
         <div class="card-body">
-            <form method="post" asp-controller="Employee" asp-action="EmployeeAddEdit">
+            @* <form method="post" asp-controller="Employee" asp-action="EmployeeAddEdit">
                 <input type="hidden" name="EmployeeID" value="@Model.EmployeeID" />
 
                 <div class="mb-3">
@@ -118,9 +119,78 @@
 
 
                 <button type="submit" class="btn btn-success">Save</button>
-            </form>
+            </form>*@
+
+            @using (Html.BeginForm("EmployeeAddEdit", "Employee", FormMethod.Post, new { @class = "form-horizontal" }))
+            {
+                @Html.HiddenFor(model => model.EmployeeID)
+                <div class="mb-3">
+                    @Html.LabelFor(model => model.FirstName, new { @class = "form-label" })
+                    @*@Html.TextBoxFor(model => model.FirstName, new { @class = "form-control", placeholder = "Enter Employee First Name", required = "required" })*@
+                    <input asp-for="FirstName" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+
+                </div>
+                <div class="mb-3">
+                    @Html.LabelFor(model => model.LastName, new { @class = "form-label" })
+                    @*@Html.TextBoxFor(model => model.LastName, new { @class = "form-control", placeholder = "Enter Employee Last Name", required = "required" })*@
+                    <input asp-for="LastName" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    @Html.LabelFor(model => model.Email, new { @class = "form-label" })
+                    @* @Html.TextBoxFor(model => model.Email, new { @class = "form-control", placeholder = "Enter Email" }) *@
+                    <input asp-for="Email" class="form-control" placeholder="Enter Email" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    @Html.LabelFor(model => model.PhoneNumber, new { @class = "form-label" })
+                    @* @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control", placeholder = "Enter Phone Number", pattern = "[0-9]{10}", required = "required" }) *@
+                    <input asp-for="PhoneNumber" class="form-control" placeholder="Enter Phone Number" pattern="[0-9]{10}"/>
+                </div>
+                @* <div class="mb-3">
+                    <label class="form-label">Gender</label><br />
+
+                    <div class="form-check form-check-inline">
+                        @Html.RadioButtonFor(model => model.Gender, "Male", new { @class = "form-check-input", id = "genderMale" })
+                        <label class="form-check-label" for="genderMale">Male</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        @Html.RadioButtonFor(model => model.Gender, "Female", new { @class = "form-check-input", id = "genderFemale" })
+                        <label class="form-check-label" for="genderFemale">Female</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        @Html.RadioButtonFor(model => model.Gender, "Other", new { @class = "form-check-input", id = "genderOther" })
+                        <label class="form-check-label" for="genderOther">Other</label>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    @Html.LabelFor(model => model.Salary, new { @class = "form-label" })
+                    @Html.TextBoxFor(model => model.Salary, new { @class = "form-control", placeholder = "Enter Salary", step = "0.01", required = "required" })
+                </div>
+                <div class="mb-3">
+                    @Html.LabelFor(model => model.DateOfBirth, new { @class = "form-label" })
+                    @Html.TextBoxFor(model => model.DateOfBirth, "{0:yyyy-MM-dd}", new { type = "date", min = "1900-01-01", max = DateTime.Now.ToString("yyyy-MM-dd"), @class = "form-control", required = "required" })
+                </div> *@
+                @* <div class="mb-3">
+                    @Html.LabelFor(model => model)
+                </div> *@
+
+                <button type="submit" class="btn btn-success">Save</button>
+            }
         </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+        @* @section Scripts{
+            @{
+                await Html.RenderPartialAsync("_ValidationScriptsPartial");
+            }
+        } *@
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
+</html> 

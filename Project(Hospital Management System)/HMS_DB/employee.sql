@@ -42,8 +42,8 @@ CREATE OR Alter PROCEDURE PR_Employee_Insert
     @IsActive BIT = 1
 AS
 BEGIN
-    INSERT INTO Employee (FirstName, LastName, Email, PhoneNumber, DateOfBirth, Gender, HireDate, JobTitle, Department, Salary, IsActive)
-    VALUES (@FirstName, @LastName, @Email, @PhoneNumber, @DateOfBirth, @Gender, @HireDate, @JobTitle, @Department, @Salary, @IsActive);
+    INSERT INTO Employee (FirstName, LastName, Email, PhoneNumber, DateOfBirth, Gender, HireDate, JobTitle, Department, Salary, IsActive, UpdatedAt)
+    VALUES (@FirstName, @LastName, @Email, @PhoneNumber, @DateOfBirth, @Gender, @HireDate, @JobTitle, @Department, @Salary, @IsActive,GETDATE());
 END;
 
 EXEC PR_Employee_SelectAll;
