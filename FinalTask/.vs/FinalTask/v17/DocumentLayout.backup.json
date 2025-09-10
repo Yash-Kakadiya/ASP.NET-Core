@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\01. Github\\ASP.NET-Core\\FinalTask\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BD0C4519-A626-45FC-BEE4-79807DAEF9ED}|FinalTask.csproj|d:\\01. github\\asp.net-core\\finaltask\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{BD0C4519-A626-45FC-BEE4-79807DAEF9ED}|FinalTask.csproj|solutionrelative:wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BD0C4519-A626-45FC-BEE4-79807DAEF9ED}|FinalTask.csproj|d:\\01. github\\asp.net-core\\finaltask\\views\\student\\addedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{BD0C4519-A626-45FC-BEE4-79807DAEF9ED}|FinalTask.csproj|solutionrelative:views\\student\\addedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD0C4519-A626-45FC-BEE4-79807DAEF9ED}|FinalTask.csproj|d:\\01. github\\asp.net-core\\finaltask\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BD0C4519-A626-45FC-BEE4-79807DAEF9ED}|FinalTask.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{BD0C4519-A626-45FC-BEE4-79807DAEF9ED}|FinalTask.csproj|d:\\01. github\\asp.net-core\\finaltask\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD0C4519-A626-45FC-BEE4-79807DAEF9ED}|FinalTask.csproj|solutionrelative:controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD0C4519-A626-45FC-BEE4-79807DAEF9ED}|FinalTask.csproj|d:\\01. github\\asp.net-core\\finaltask\\models\\studentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD0C4519-A626-45FC-BEE4-79807DAEF9ED}|FinalTask.csproj|solutionrelative:models\\studentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD0C4519-A626-45FC-BEE4-79807DAEF9ED}|FinalTask.csproj|d:\\01. github\\asp.net-core\\finaltask\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{BD0C4519-A626-45FC-BEE4-79807DAEF9ED}|FinalTask.csproj|solutionrelative:wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BD0C4519-A626-45FC-BEE4-79807DAEF9ED}|FinalTask.csproj|d:\\01. github\\asp.net-core\\finaltask\\views\\student\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -23,12 +27,8 @@
       "RelativeMoniker": "D:0:0:{BD0C4519-A626-45FC-BEE4-79807DAEF9ED}|FinalTask.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD0C4519-A626-45FC-BEE4-79807DAEF9ED}|FinalTask.csproj|d:\\01. github\\asp.net-core\\finaltask\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD0C4519-A626-45FC-BEE4-79807DAEF9ED}|FinalTask.csproj|solutionrelative:controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD0C4519-A626-45FC-BEE4-79807DAEF9ED}|FinalTask.csproj|d:\\01. github\\asp.net-core\\finaltask\\models\\studentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD0C4519-A626-45FC-BEE4-79807DAEF9ED}|FinalTask.csproj|solutionrelative:models\\studentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD0C4519-A626-45FC-BEE4-79807DAEF9ED}|FinalTask.csproj|d:\\01. github\\asp.net-core\\finaltask\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD0C4519-A626-45FC-BEE4-79807DAEF9ED}|FinalTask.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BD0C4519-A626-45FC-BEE4-79807DAEF9ED}|FinalTask.csproj|d:\\01. github\\asp.net-core\\finaltask\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -46,56 +46,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "style.css",
               "DocumentMoniker": "D:\\01. Github\\ASP.NET-Core\\FinalTask\\wwwroot\\css\\style.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\style.css",
               "ToolTip": "D:\\01. Github\\ASP.NET-Core\\FinalTask\\wwwroot\\css\\style.css",
               "RelativeToolTip": "wwwroot\\css\\style.css",
-              "ViewState": "AgIAAK0EAAAAAAAAAAAkwKIEAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFEDAAAAAAAAAAAMwF8DAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-09-10T12:57:41.387Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\01. Github\\ASP.NET-Core\\FinalTask\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
               "ToolTip": "D:\\01. Github\\ASP.NET-Core\\FinalTask\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAkwBoAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-09-10T12:47:50.395Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "List.cshtml",
               "DocumentMoniker": "D:\\01. Github\\ASP.NET-Core\\FinalTask\\Views\\Student\\List.cshtml",
               "RelativeDocumentMoniker": "Views\\Student\\List.cshtml",
               "ToolTip": "D:\\01. Github\\ASP.NET-Core\\FinalTask\\Views\\Student\\List.cshtml",
               "RelativeToolTip": "Views\\Student\\List.cshtml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAwwCsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAkwLAAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-09-10T12:09:40.039Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\01. Github\\ASP.NET-Core\\FinalTask\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "D:\\01. Github\\ASP.NET-Core\\FinalTask\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAwwBMAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAkwDsAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-09-10T12:09:12.467Z",
               "EditorCaption": ""
@@ -115,20 +115,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "AddEdit.cshtml",
               "DocumentMoniker": "D:\\01. Github\\ASP.NET-Core\\FinalTask\\Views\\Student\\AddEdit.cshtml",
               "RelativeDocumentMoniker": "Views\\Student\\AddEdit.cshtml",
               "ToolTip": "D:\\01. Github\\ASP.NET-Core\\FinalTask\\Views\\Student\\AddEdit.cshtml",
               "RelativeToolTip": "Views\\Student\\AddEdit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAAAGEAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-09-10T12:02:16.242Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "StudentModel.cs",
               "DocumentMoniker": "D:\\01. Github\\ASP.NET-Core\\FinalTask\\Models\\StudentModel.cs",
               "RelativeDocumentMoniker": "Models\\StudentModel.cs",
@@ -141,13 +141,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "StudentController.cs",
               "DocumentMoniker": "D:\\01. Github\\ASP.NET-Core\\FinalTask\\Controllers\\StudentController.cs",
               "RelativeDocumentMoniker": "Controllers\\StudentController.cs",
               "ToolTip": "D:\\01. Github\\ASP.NET-Core\\FinalTask\\Controllers\\StudentController.cs",
               "RelativeToolTip": "Controllers\\StudentController.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAwwEcAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAgwEgAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-10T11:59:47.833Z",
               "EditorCaption": ""

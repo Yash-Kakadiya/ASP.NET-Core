@@ -18,7 +18,6 @@ namespace FinalTask.Models
         [RegularExpression(@"^\d{10}$", ErrorMessage = "Please enter a valid 10-digit mobile number.")]
         public string MobileNo { get; set; }
 
-        // Address is optional as per the drawing
         public string Address { get; set; }
 
         [Required(ErrorMessage = "Email is required.")]
