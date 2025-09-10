@@ -1,0 +1,273 @@
+﻿@model System.Data.DataTable
+@{
+    ViewData["Title"] = "Student Dashboard";
+
+    // --- Dynamic Dashboard Calculations (with new stat) ---
+    int totalStudents = 0;
+    int maleCount = 0;
+    int femaleCount = 0;
+    int fromRajkotCount = 0;
+    int cricketPlayerCount = 0;
+    double totalPercentage = 0;
+
+    if (Model != null && Model.Rows.Count > 0)
+    {
+        totalStudents = Model.Rows.Count;
+        foreach (System.Data.DataRow row in Model.Rows)
+        {
+            if (row["Gender"].ToString().Equals("Male", StringComparison.OrdinalIgnoreCase))
+            {
+                maleCount++;
+            }
+            else
+            {
+                femaleCount++;
+            }
+
+            if (Convert.ToBoolean(row["LiveInRajkot"]))
+            {
+                fromRajkotCount++;
+            }
+            if (Convert.ToBoolean(row["IsPlayingCricket"]))
+            {
+                cricketPlayerCount++;
+            }
+            totalPercentage += Convert.ToDouble(row["TwelfthPercentage"]);
+        }
+    }
+    double averagePercentage = totalStudents > 0 ? Math.Round(totalPercentage / totalStudents, 2) : 0;
+}
+
+<head>
+    <!-- Chart.js for beautiful, animated charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<!-- --- DYNAMIC DASHBOARD --- -->
+<div class="dashboard-grid">
+    <div class="stat-card">
+        <div class="icon-wrapper" style="background: linear-gradient(45deg, #0d6efd, #0dcaf0);">
+            <i class="bi bi-people-fill"></i>
+        </div>
+        <div>
+            <div class="stat-title">Total Students</div>
+            <div class="stat-value">@totalStudents</div>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="icon-wrapper" style="background: linear-gradient(45deg, #198754, #20c997);">
+            <i class="bi bi-geo-alt-fill"></i>
+        </div>
+        <div>
+            <div class="stat-title">From Rajkot</div>
+            <div class="stat-value">@fromRajkotCount</div>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="icon-wrapper" style="background: linear-gradient(45deg, #ffc107, #fd7e14);">
+            <i class="bi bi-graph-up-arrow"></i>
+        </div>
+        <div>
+            <div class="stat-title">Avg. Percentage</div>
+            <div class="stat-value">@averagePercentage%</div>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="icon-wrapper" style="background: linear-gradient(45deg, #dc3545, #d63384);">
+            <i class="bi bi-person-arms-up"></i>
+        </div>
+        <div>
+            <div class="stat-title">Cricket Players</div>
+            <div class="stat-value">@cricketPlayerCount</div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4">
+    <div class="col-xl-8">
+        <div class="card main-card main-table-card">
+            <div class="card-table-header">
+                <div class="search-wrapper">
+                    <i class="bi bi-search"></i>
+                    <input type="text" id="studentSearch" class="form-control" placeholder="Search students...">
+                </div>
+                <a asp-controller="Student" asp-action="AddEdit" class="btn btn-primary">
+                    <i class="bi bi-plus-lg me-1"></i> Add New Student
+                </a>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0" id="studentsTable">
+                        <thead>
+                            <tr>
+                                <th class="ps-4" style="width: 40%;">Student</th>
+                                <th>Enrollment No.</th>
+                                <th>Mobile No.</th>
+                                <th class="text-center">Percentage</th>
+                                <th class="text-center pe-4">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model != null && Model.Rows.Count > 0)
+                            {
+                                var gradients = new[] {
+                                                        "linear-gradient(45deg, #0d6efd, #0dcaf0)",
+                                                        "linear-gradient(45deg, #6610f2, #6f42c1)",
+                                                        "linear-gradient(45deg, #198754, #20c997)",
+                                                        "linear-gradient(45deg, #d63384, #dc3545)",
+                                                        "linear-gradient(45deg, #fd7e14, #ffc107)",
+                                                        "linear-gradient(45deg, #20c997, #198754)"
+                                                        };
+                                var colorIndex = 0;
+
+                                foreach (System.Data.DataRow row in Model.Rows)
+                                {
+                                    var studentName = row["Name"].ToString();
+                                    var avatarChar = string.IsNullOrEmpty(studentName) ? "S" : studentName.Substring(0, 1).ToUpper();
+                                    var avatarBg = gradients[colorIndex % gradients.Length];
+                                    colorIndex++;
+
+                                    <tr>
+                                        <td class="ps-4">
+                                            <div class="student-info">
+                                                <div class="student-avatar" style="background:@avatarBg">@avatarChar</div>
+                                                <div>
+                                                    <div class="student-name">@studentName</div>
+                                                    <div class="student-email">@row["Email"]</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>@row["EnrollmentNo"]</td>
+                                        <td>@row["MobileNo"]</td>
+                                        <td class="text-center">@row["TwelfthPercentage"]%</td>
+                                        <td class="text-center pe-4">
+                                            <div class="action-buttons">
+                                                <a asp-controller="Student" asp-action="AddEdit" asp-route-id="@row["Id"]" class="btn btn-sm btn-outline-secondary" data-bs-toggle="tooltip" title="Edit">
+                                                    <i class="bi bi-pencil-fill"></i>
+                                                </a>
+                                                <a href="javascript:void(0);" onclick="confirmDelete('@row["Id"]')" class="btn btn-sm btn-outline-danger ms-1" data-bs-toggle="tooltip" title="Delete">
+                                                    <i class="bi bi-trash3-fill"></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="5">
+                                        <div class="empty-state">
+                                            <i class="bi bi-journal-x"></i>
+                                            <h5>No Students Found</h5>
+                                            <p>Get started by adding a new student record.</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4">
+        <div class="chart-card">
+            <h5 class="m-2 mb-3">Gender Distribution</h5>
+            <canvas id="genderDistributionChart"></canvas>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- LIVE SEARCH FUNCTIONALITY ---
+            document.getElementById('studentSearch').addEventListener('keyup', function() {
+                let filter = this.value.toLowerCase();
+                let table = document.getElementById('studentsTable');
+                let rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+
+                for (let i = 0; i < rows.length; i++) {
+                    if (rows[i].getElementsByTagName('td').length > 1) {
+                         let studentName = rows[i].getElementsByClassName('student-name')[0].textContent.toLowerCase();
+                         let studentEmail = rows[i].getElementsByClassName('student-email')[0].textContent.toLowerCase();
+                         let enrollmentNo = rows[i].getElementsByTagName('td')[1].textContent.toLowerCase();
+
+                        if (studentName.includes(filter) || studentEmail.includes(filter) || enrollmentNo.includes(filter)) {
+                            rows[i].style.display = "";
+                        } else {
+                            rows[i].style.display = "none";
+                        }
+                    }
+                }
+            });
+
+            // --- GENDER DISTRIBUTION CHART ---
+            if (document.getElementById('genderDistributionChart')) {
+                const ctx = document.getElementById('genderDistributionChart').getContext('2d');
+
+                const maleGradient = ctx.createLinearGradient(0, 0, 0, 200);
+                maleGradient.addColorStop(0, 'rgba(13, 110, 253, 0.9)');
+                maleGradient.addColorStop(1, 'rgba(13, 202, 240, 0.9)');
+
+                const femaleGradient = ctx.createLinearGradient(0, 0, 0, 200);
+                femaleGradient.addColorStop(0, 'rgba(214, 51, 132, 0.9)');
+                femaleGradient.addColorStop(1, 'rgba(220, 53, 69, 0.9)');
+
+                new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Male', 'Female'],
+                        datasets: [{
+                            data: [@maleCount, @femaleCount],
+                            backgroundColor: [maleGradient, femaleGradient],
+                            borderColor: ['#ffffff'],
+                            borderWidth: 4,
+                            hoverOffset: 8
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        cutout: '70%',
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    padding: 20,
+                                    font: { size: 14 }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // --- BOOTSTRAP TOOLTIPS ---
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl)
+            });
+        });
+
+        // --- SWEETALERT2 DELETE CONFIRMATION ---
+        function confirmDelete(studentId) {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "This action cannot be undone.",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#6c757d',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = `/Student/Delete/${studentId}`;
+                }
+            })
+        }
+    </script>
+}
+

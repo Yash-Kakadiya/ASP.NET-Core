@@ -1,0 +1,119 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\\u00A5@$#\\ASP.Net\\Demo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E110E9EF-185A-45C6-B1E0-54E96A6B2C3A}|Demo.csproj|d:\\\u00A5@$#\\asp.net\\demo\\views\\user\\useraddedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E110E9EF-185A-45C6-B1E0-54E96A6B2C3A}|Demo.csproj|solutionrelative:views\\user\\useraddedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E110E9EF-185A-45C6-B1E0-54E96A6B2C3A}|Demo.csproj|d:\\\u00A5@$#\\asp.net\\demo\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E110E9EF-185A-45C6-B1E0-54E96A6B2C3A}|Demo.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E110E9EF-185A-45C6-B1E0-54E96A6B2C3A}|Demo.csproj|d:\\\u00A5@$#\\asp.net\\demo\\helpers\\imagehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E110E9EF-185A-45C6-B1E0-54E96A6B2C3A}|Demo.csproj|solutionrelative:helpers\\imagehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E110E9EF-185A-45C6-B1E0-54E96A6B2C3A}|Demo.csproj|d:\\\u00A5@$#\\asp.net\\demo\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E110E9EF-185A-45C6-B1E0-54E96A6B2C3A}|Demo.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E110E9EF-185A-45C6-B1E0-54E96A6B2C3A}|Demo.csproj|d:\\\u00A5@$#\\asp.net\\demo\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E110E9EF-185A-45C6-B1E0-54E96A6B2C3A}|Demo.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E110E9EF-185A-45C6-B1E0-54E96A6B2C3A}|Demo.csproj|d:\\\u00A5@$#\\asp.net\\demo\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E110E9EF-185A-45C6-B1E0-54E96A6B2C3A}|Demo.csproj|solutionrelative:views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ImageHelper.cs",
+              "DocumentMoniker": "D:\\\u00A5@$#\\ASP.Net\\Demo\\Helpers\\ImageHelper.cs",
+              "RelativeDocumentMoniker": "Helpers\\ImageHelper.cs",
+              "ToolTip": "D:\\\u00A5@$#\\ASP.Net\\Demo\\Helpers\\ImageHelper.cs*",
+              "RelativeToolTip": "Helpers\\ImageHelper.cs*",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCkAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T07:50:49.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "D:\\\u00A5@$#\\ASP.Net\\Demo\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "D:\\\u00A5@$#\\ASP.Net\\Demo\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-06T07:33:19.797Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\\u00A5@$#\\ASP.Net\\Demo\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\\u00A5@$#\\ASP.Net\\Demo\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABYAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-05T07:42:46.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\\u00A5@$#\\ASP.Net\\Demo\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\\u00A5@$#\\ASP.Net\\Demo\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-05T07:40:19.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserAddEdit.cshtml",
+              "DocumentMoniker": "D:\\\u00A5@$#\\ASP.Net\\Demo\\Views\\User\\UserAddEdit.cshtml",
+              "RelativeDocumentMoniker": "Views\\User\\UserAddEdit.cshtml",
+              "ToolTip": "D:\\\u00A5@$#\\ASP.Net\\Demo\\Views\\User\\UserAddEdit.cshtml",
+              "RelativeToolTip": "Views\\User\\UserAddEdit.cshtml",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAAAFwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-05T07:22:00.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\\u00A5@$#\\ASP.Net\\Demo\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "D:\\\u00A5@$#\\ASP.Net\\Demo\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAgwCEAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T07:21:12.108Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
