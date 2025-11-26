@@ -16,7 +16,7 @@ CREATE TABLE Employee (
     DeptID INT NOT NULL FOREIGN KEY REFERENCES Department(DeptID)
 );
 
-CREATE PROCEDURE PR_Department_SelectAll
+CREATE OR ALTER PROCEDURE PR_Department_SelectAll
 AS
 BEGIN
     SELECT DeptID, DepartmentName
@@ -24,7 +24,7 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE PR_Department_SelectByPK
+CREATE OR ALTER PROCEDURE PR_Department_SelectByPK
     @DeptID INT
 AS
 BEGIN
@@ -34,7 +34,7 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE PR_Department_Insert
+CREATE OR ALTER PROCEDURE PR_Department_Insert
     @DepartmentName VARCHAR(100)
 AS
 BEGIN
@@ -43,7 +43,7 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE PR_Department_Update
+CREATE OR ALTER PROCEDURE PR_Department_Update
     @DeptID INT,
     @DepartmentName VARCHAR(100)
 AS
@@ -54,7 +54,7 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE PR_Department_Delete
+CREATE OR ALTER PROCEDURE PR_Department_Delete
     @DeptID INT
 AS
 BEGIN
@@ -62,7 +62,7 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE PR_Employee_SelectAll
+CREATE OR ALTER PROCEDURE PR_Employee_SelectAll
 AS
 BEGIN
     SELECT 
@@ -78,7 +78,7 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE PR_Employee_SelectByPK
+CREATE OR ALTER PROCEDURE PR_Employee_SelectByPK
     @EmpID INT
 AS
 BEGIN
@@ -94,7 +94,7 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE PR_Employee_Insert
+CREATE OR ALTER PROCEDURE PR_Employee_Insert
     @EmpName VARCHAR(100),
     @Salary DECIMAL(10,2),
     @JoiningDate DATETIME,
@@ -107,7 +107,7 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE PR_Employee_Update
+CREATE OR ALTER PROCEDURE PR_Employee_Update
     @EmpID INT,
     @EmpName VARCHAR(100),
     @Salary DECIMAL(10,2),
@@ -127,10 +127,3 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE PR_Employee_Delete
-    @EmpID INT
-AS
-BEGIN
-    DELETE FROM Employee WHERE EmpID = @EmpID;
-END
-GO
