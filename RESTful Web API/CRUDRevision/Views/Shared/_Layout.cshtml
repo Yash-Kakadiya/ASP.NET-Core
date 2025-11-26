@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CRUDRevision</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <style>
+        /* Navbar Hover Effects */
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+            .navbar-nav .nav-link:hover {
+                color: #0d6efd !important;
+                transform: translateY(-2px);
+            }
+
+        /* Active Menu Highlight */
+        .nav-link.active {
+            font-weight: 700;
+            color: #0d6efd !important;
+        }
+
+        /* Dropdown Hover */
+        .dropdown-menu a:hover {
+            background-color: #f0f4ff;
+            color: #0d6efd;
+        }
+
+        /* Footer UI */
+        footer {
+            padding: 12px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+            <div class="container-fluid">
+
+                <a class="navbar-brand fw-bold" asp-controller="Home" asp-action="Index">
+                    <i class="bi bi-speedometer2"></i> CRUDRevision
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#mainNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNavbar">
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <!-- Home -->
+                        <li class="nav-item">
+                            <a class="nav-link @(Context.Request.Path.Value.Contains("/Home") ? "active" : "")"
+                               asp-controller="Home" asp-action="Index">
+                                <i class="bi bi-house-door"></i> Home
+                            </a>
+                        </li>
+
+                        <!-- Master Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle @(Context.Request.Path.Value.Contains("Department") || Context.Request.Path.Value.Contains("Employee") ? "active" : "")"
+                               href="#" role="button" data-bs-toggle="dropdown">
+                                <i class="bi bi-grid-fill"></i> Master
+                            </a>
+
+                            <ul class="dropdown-menu shadow-sm border-0">
+
+                                <li>
+                                    <a class="dropdown-item"
+                                       asp-controller="Department" asp-action="Index">
+                                        <i class="bi bi-building"></i> Department
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item"
+                                       asp-controller="Employee" asp-action="Index">
+                                        <i class="bi bi-people-fill"></i> Employee
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <!-- Privacy -->
+                        <li class="nav-item">
+                            <a class="nav-link @(Context.Request.Path.Value.Contains("/Privacy") ? "active" : "")"
+                               asp-controller="Home" asp-action="Privacy">
+                                <i class="bi bi-shield-check"></i> Privacy
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <div class="container mt-4">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="border-top text-center text-muted">
+        <div class="container">
+            © 2025 - CRUDRevision | Designed by ¥&#64;$# 🚀
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\01. Github\\ASP.NET-Core\\RESTful Web API\\CRUDRevision\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{647DF07A-9862-43CC-A3DB-586E80C146E7}|CRUDRevision.csproj|d:\\01. github\\asp.net-core\\restful web api\\crudrevision\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{647DF07A-9862-43CC-A3DB-586E80C146E7}|CRUDRevision.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{647DF07A-9862-43CC-A3DB-586E80C146E7}|CRUDRevision.csproj|d:\\01. github\\asp.net-core\\restful web api\\crudrevision\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{647DF07A-9862-43CC-A3DB-586E80C146E7}|CRUDRevision.csproj|solutionrelative:controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{647DF07A-9862-43CC-A3DB-586E80C146E7}|CRUDRevision.csproj|d:\\01. github\\asp.net-core\\restful web api\\crudrevision\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{647DF07A-9862-43CC-A3DB-586E80C146E7}|CRUDRevision.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{647DF07A-9862-43CC-A3DB-586E80C146E7}|CRUDRevision.csproj|d:\\01. github\\asp.net-core\\restful web api\\crudrevision\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{647DF07A-9862-43CC-A3DB-586E80C146E7}|CRUDRevision.csproj|solutionrelative:controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{647DF07A-9862-43CC-A3DB-586E80C146E7}|CRUDRevision.csproj|d:\\01. github\\asp.net-core\\restful web api\\crudrevision\\views\\employee\\addedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{647DF07A-9862-43CC-A3DB-586E80C146E7}|CRUDRevision.csproj|solutionrelative:views\\employee\\addedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{647DF07A-9862-43CC-A3DB-586E80C146E7}|CRUDRevision.csproj|d:\\01. github\\asp.net-core\\restful web api\\crudrevision\\views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{647DF07A-9862-43CC-A3DB-586E80C146E7}|CRUDRevision.csproj|solutionrelative:views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{647DF07A-9862-43CC-A3DB-586E80C146E7}|CRUDRevision.csproj|d:\\01. github\\asp.net-core\\restful web api\\crudrevision\\views\\department\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{647DF07A-9862-43CC-A3DB-586E80C146E7}|CRUDRevision.csproj|solutionrelative:views\\department\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{647DF07A-9862-43CC-A3DB-586E80C146E7}|CRUDRevision.csproj|d:\\01. github\\asp.net-core\\restful web api\\crudrevision\\views\\department\\addedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{647DF07A-9862-43CC-A3DB-586E80C146E7}|CRUDRevision.csproj|solutionrelative:views\\department\\addedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{647DF07A-9862-43CC-A3DB-586E80C146E7}|CRUDRevision.csproj|d:\\01. github\\asp.net-core\\restful web api\\crudrevision\\models\\employeemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{647DF07A-9862-43CC-A3DB-586E80C146E7}|CRUDRevision.csproj|solutionrelative:models\\employeemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{647DF07A-9862-43CC-A3DB-586E80C146E7}|CRUDRevision.csproj|d:\\01. github\\asp.net-core\\restful web api\\crudrevision\\models\\departmentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{647DF07A-9862-43CC-A3DB-586E80C146E7}|CRUDRevision.csproj|solutionrelative:models\\departmentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\01. Github\\ASP.NET-Core\\RESTful Web API\\CRUDRevision\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\01. Github\\ASP.NET-Core\\RESTful Web API\\CRUDRevision\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAwAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-26T03:28:02.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\01. Github\\ASP.NET-Core\\RESTful Web API\\CRUDRevision\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\01. Github\\ASP.NET-Core\\RESTful Web API\\CRUDRevision\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAIwIQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-26T03:27:27.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AddEdit.cshtml",
+              "DocumentMoniker": "D:\\01. Github\\ASP.NET-Core\\RESTful Web API\\CRUDRevision\\Views\\Employee\\AddEdit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Employee\\AddEdit.cshtml",
+              "ToolTip": "D:\\01. Github\\ASP.NET-Core\\RESTful Web API\\CRUDRevision\\Views\\Employee\\AddEdit.cshtml",
+              "RelativeToolTip": "Views\\Employee\\AddEdit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-26T03:26:11.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\01. Github\\ASP.NET-Core\\RESTful Web API\\CRUDRevision\\Views\\Employee\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Employee\\Index.cshtml",
+              "ToolTip": "D:\\01. Github\\ASP.NET-Core\\RESTful Web API\\CRUDRevision\\Views\\Employee\\Index.cshtml",
+              "RelativeToolTip": "Views\\Employee\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-26T03:25:42.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AddEdit.cshtml",
+              "DocumentMoniker": "D:\\01. Github\\ASP.NET-Core\\RESTful Web API\\CRUDRevision\\Views\\Department\\AddEdit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Department\\AddEdit.cshtml",
+              "ToolTip": "D:\\01. Github\\ASP.NET-Core\\RESTful Web API\\CRUDRevision\\Views\\Department\\AddEdit.cshtml",
+              "RelativeToolTip": "Views\\Department\\AddEdit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-26T03:24:13.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\01. Github\\ASP.NET-Core\\RESTful Web API\\CRUDRevision\\Views\\Department\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Department\\Index.cshtml",
+              "ToolTip": "D:\\01. Github\\ASP.NET-Core\\RESTful Web API\\CRUDRevision\\Views\\Department\\Index.cshtml",
+              "RelativeToolTip": "Views\\Department\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-26T03:23:40.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "D:\\01. Github\\ASP.NET-Core\\RESTful Web API\\CRUDRevision\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EmployeeController.cs",
+              "ToolTip": "D:\\01. Github\\ASP.NET-Core\\RESTful Web API\\CRUDRevision\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "Controllers\\EmployeeController.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAD4v4QAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T03:21:55.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DepartmentController.cs",
+              "DocumentMoniker": "D:\\01. Github\\ASP.NET-Core\\RESTful Web API\\CRUDRevision\\Controllers\\DepartmentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DepartmentController.cs",
+              "ToolTip": "D:\\01. Github\\ASP.NET-Core\\RESTful Web API\\CRUDRevision\\Controllers\\DepartmentController.cs",
+              "RelativeToolTip": "Controllers\\DepartmentController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAABQAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T03:17:35.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EmployeeModel.cs",
+              "DocumentMoniker": "D:\\01. Github\\ASP.NET-Core\\RESTful Web API\\CRUDRevision\\Models\\EmployeeModel.cs",
+              "RelativeDocumentMoniker": "Models\\EmployeeModel.cs",
+              "ToolTip": "D:\\01. Github\\ASP.NET-Core\\RESTful Web API\\CRUDRevision\\Models\\EmployeeModel.cs",
+              "RelativeToolTip": "Models\\EmployeeModel.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAswCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T03:16:27.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DepartmentModel.cs",
+              "DocumentMoniker": "D:\\01. Github\\ASP.NET-Core\\RESTful Web API\\CRUDRevision\\Models\\DepartmentModel.cs",
+              "RelativeDocumentMoniker": "Models\\DepartmentModel.cs",
+              "ToolTip": "D:\\01. Github\\ASP.NET-Core\\RESTful Web API\\CRUDRevision\\Models\\DepartmentModel.cs",
+              "RelativeToolTip": "Models\\DepartmentModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T03:15:08.459Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

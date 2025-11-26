@@ -1,0 +1,41 @@
+﻿@using System.Data
+
+<h2>Employee List</h2>
+
+<a class="btn btn-primary mb-3" asp-action="AddEdit">Add Employee</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Joining Date</th>
+            <th>City</th>
+            <th>Department</th>
+            <th class="text-center">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (DataRow row in Model.Rows)
+        {
+            <tr>
+                <td>@row["EmpName"]</td>
+                <td>@row["Salary"]</td>
+                <td>@Convert.ToDateTime(row["JoiningDate"]).ToShortDateString()</td>
+                <td>@row["City"]</td>
+                <td>@row["DepartmentName"]</td>
+
+                <td class="text-center">
+                    <a class="btn btn-success btn-sm"
+                       asp-route-EmpID="@row["EmpID"]"
+                       asp-action="AddEdit">Edit</a>
+
+                    <a class="btn btn-danger btn-sm"
+                       asp-route-EmpID="@row["EmpID"]"
+                       asp-action="Delete"
+                       onclick="return confirm('Delete this employee?');">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

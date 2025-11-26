@@ -1,0 +1,15 @@
+D:\01.DU Work\ASP.NET-Core\Lab01\bin\Debug\net8.0\Lab01.exe
+D:\01.DU Work\ASP.NET-Core\Lab01\bin\Debug\net8.0\Lab01.deps.json
+D:\01.DU Work\ASP.NET-Core\Lab01\bin\Debug\net8.0\Lab01.runtimeconfig.json
+D:\01.DU Work\ASP.NET-Core\Lab01\bin\Debug\net8.0\Lab01.dll
+D:\01.DU Work\ASP.NET-Core\Lab01\bin\Debug\net8.0\Lab01.pdb
+D:\01.DU Work\ASP.NET-Core\Lab01\obj\Debug\net8.0\Lab01.GeneratedMSBuildEditorConfig.editorconfig
+D:\01.DU Work\ASP.NET-Core\Lab01\obj\Debug\net8.0\Lab01.AssemblyInfoInputs.cache
+D:\01.DU Work\ASP.NET-Core\Lab01\obj\Debug\net8.0\Lab01.AssemblyInfo.cs
+D:\01.DU Work\ASP.NET-Core\Lab01\obj\Debug\net8.0\Lab01.csproj.CoreCompileInputs.cache
+D:\01.DU Work\ASP.NET-Core\Lab01\obj\Debug\net8.0\Lab01.sourcelink.json
+D:\01.DU Work\ASP.NET-Core\Lab01\obj\Debug\net8.0\Lab01.dll
+D:\01.DU Work\ASP.NET-Core\Lab01\obj\Debug\net8.0\refint\Lab01.dll
+D:\01.DU Work\ASP.NET-Core\Lab01\obj\Debug\net8.0\Lab01.pdb
+D:\01.DU Work\ASP.NET-Core\Lab01\obj\Debug\net8.0\Lab01.genruntimeconfig.cache
+D:\01.DU Work\ASP.NET-Core\Lab01\obj\Debug\net8.0\ref\Lab01.dll

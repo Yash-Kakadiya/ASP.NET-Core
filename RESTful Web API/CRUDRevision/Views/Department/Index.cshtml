@@ -1,0 +1,28 @@
+﻿@using System.Data
+
+<h2>Department List</h2>
+
+<a class="btn btn-primary mb-3" asp-action="AddEdit">Add Department</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Department</th>
+            <th class="text-center">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (DataRow row in Model.Rows)
+        {
+            <tr>
+                <td>@row["DepartmentName"]</td>
+
+                <td class="text-center">
+                    <a class="btn btn-success btn-sm" asp-route-DeptID="@row["DeptID"]" asp-action="AddEdit">Edit</a>
+                    <a class="btn btn-danger btn-sm" asp-route-DeptID="@row["DeptID"]" asp-action="Delete"
+                       onclick="return confirm('Are you sure?');">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

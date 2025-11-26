@@ -1,0 +1,37 @@
+﻿@model CRUDRevision.Models.EmployeeModel
+
+<h2>Add / Edit Employee</h2>
+
+<form asp-action="Save" method="post">
+    <input type="hidden" asp-for="EmpID" />
+
+    <div class="mb-3">
+        <label>Name</label>
+        <input asp-for="EmpName" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Salary</label>
+        <input asp-for="Salary" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Joining Date</label>
+        <input asp-for="JoiningDate" type="date" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>City</label>
+        <input asp-for="City" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Department</label>
+        <select asp-for="DeptID" class="form-control"
+                asp-items="@(new SelectList(ViewBag.DeptList, "DeptID", "DepartmentName"))">
+            <option value="">Select Department</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-success">Save</button>
+</form>

@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Welcome to StudentHub";
+}
+
+
+<div class="container-fluid p-0">
+    <div class="hero-section mb-5">
+        <div class="hero-content">
+            <h1 class="display-4">Welcome to StudentHub</h1>
+            <p class="lead">The future of student management. A smarter, more efficient way to handle student data, track progress, and unlock potential.</p>
+            <a asp-controller="Student" asp-action="List" class="btn btn-light cta-button">
+                Get Started <i class="bi bi-arrow-right-short"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="container features-section">
+        <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="fw-bold">Powerful Features, Simple Interface</h2>
+                <p class="text-white">Built with precision and designed for clarity, inspired by the discipline to achieve excellence.</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-speedometer2"></i>
+                    </div>
+                    <h5 class="fw-bold">Dynamic Dashboard</h5>
+                    <p class="text-white">Visualize key metrics and gain instant insights into your student data with beautiful, interactive charts.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-people-fill"></i>
+                    </div>
+                    <h5 class="fw-bold">Efficient Management</h5>
+                    <p class="text-white">Add, edit, and manage student records seamlessly with an intuitive and clean user interface.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h5 class="fw-bold">Robust & Secure</h5>
+                    <p class="text-white">Powered by .NET 8 and SQL Server, ensuring your data is handled with reliability and security.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
